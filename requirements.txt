@@ -1,0 +1,26 @@
+# Slim set for Streamlit Community Cloud (CPU torch avoids multi-GB CUDA wheels)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+
+# Retrieval & embeddings
+chromadb>=0.4.22
+rank-bm25>=0.2.2
+sentence-transformers>=2.3.0
+datasets>=2.16.0
+numpy
+pandas>=2.0.0
+pypdf>=4.0.0
+
+# LLM (Groq) & chunking
+langchain-core>=0.1.28
+langchain-text-splitters>=0.0.1
+langchain-groq>=0.1.0
+python-dotenv>=1.0.0
+
+# UI & API
+streamlit>=1.31.1
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.1
+pydantic>=2.6.0
+
+# Optional: spacy (NER ruler; regex fallback is used if missing), elasticsearch (BM25 engine)
